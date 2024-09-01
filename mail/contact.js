@@ -19,9 +19,9 @@ $(function () {
                 to_name: "Anass",
                 from_name: name,
                 message: `
-                    <b>EMAIL: ${email}</b><br>
-                    <b>Subject: ${subject}</b><br>
-                    <p>${message}</p>
+                    ${email}
+                    ${subject}
+                    ${message}
                 `,
             })
             .then(function(response) {
