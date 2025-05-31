@@ -165,6 +165,13 @@
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Développeur Web</h5>
+                            <p class="mb-2"><strong>Sycomore Software – Groupe ATLINE</strong> | <small>Depuis Décembre 2024</small></p>
+                            <p>Participation au développement de solutions web pour le groupe ATLINE à Fès.
+                            <br>Technologies : PHP (Symfony), Angular, API REST, MySQL, Git</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Stage PFE</h5>
                             <p class="mb-2"><strong> Sonasid</strong> | <small>Mars 2024 - Juillet 2024</small></p>
                             <p> Sujet : Réalisation d'une plateforme de gestion des stagiaires et des formations (SonasidPFS)
@@ -311,6 +318,16 @@
             </div>
            
             <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/SYCOMORE.png" alt="Sycomore Project">
+                    </div>
+                    <h5 class="text-center">Sycomore Software</h5>
+                    <p class="text-center">
+                        Participation au développement de solutions web pour le Groupe ATLINE à Fès.
+                        <br>Technologies : Angular, PHP (Symfony), API REST
+                    </p>
+                </div>
                 <!-- Project 1 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
@@ -319,9 +336,9 @@
                     </div>
                     <h5 class="text-center">SonasidPFS</h5>
                     <p class="text-center">Réalisation d'une plateforme de gestion des stagiaires et des formations.</p>
-                    <div class="text-center">
+                    <!-- <div class="text-center">
                         <a href="https://drive.google.com/file/d/1ByTTT09o7nxGt8rZov8i1bmybpMFrdim/view?usp=sharing" class="btn btn-primary" target="_blank">Voir le rapport</a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Project 2 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
@@ -331,9 +348,9 @@
                     </div>
                     <h5 class="text-center">Abir Optic</h5>
                     <p class="text-center">Développement d'une application WEB mobile pour la gestion des clients.</p>
-                    <div class="text-center">
+                    <!-- <div class="text-center">
                         <a href="https://drive.google.com/file/d/1PHCPoP-OWxvE3I_RB7-E-S4Eh914GLV3/view?usp=sharing" class="btn btn-primary" target="_blank">Voir le rapport</a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Project 3 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
@@ -343,9 +360,9 @@
                     </div>
                     <h5 class="text-center">Marchica</h5>
                     <p class="text-center">Développement d'une application WEB de gestion des marchés publics.</p>
-                    <div class="text-center">
+                    <!-- <div class="text-center">
                         <a href="https://drive.google.com/file/d/1oa__xoSwFEACbXDpQhUrx_pK7lqytZh_/view?usp=sharing" class="btn btn-primary" target="_blank">Voir le rapport</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -462,6 +479,52 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- ✅ Chatbase Chatbot Configuration -->
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "mI7rw-dklStMOLjIMnTZu",
+    theme: {
+      color: "#007bff",
+      chatWindowBackground: "#ffffff"
+    },
+    welcomeMessage: "Bonjour 👋 Je suis AnasBot, pose-moi une question !",
+    launcherText: "💬"
+  };
+</script>
+
+<script>
+  (function () {
+    if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+      window.chatbase = (...args) => {
+        if (!window.chatbase.q) window.chatbase.q = [];
+        window.chatbase.q.push(args);
+      };
+      window.chatbase = new Proxy(window.chatbase, {
+        get(target, prop) {
+          if (prop === "q") return target.q;
+          return (...args) => target(prop, ...args);
+        }
+      });
+    }
+
+    const onLoad = function () {
+      const script = document.createElement("script");
+      script.src = "https://www.chatbase.co/embed.min.js";
+      script.id = "mI7rw-dklStMOLjIMnTZu";
+      script.dataset.chatbotId = "mI7rw-dklStMOLjIMnTZu";
+      script.dataset.domain = "www.chatbase.co";
+      document.body.appendChild(script);
+    };
+
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad);
+    }
+  })();
+</script>
+
 </body>
 
 </html>
